@@ -1,5 +1,11 @@
+import { VanishText } from "./Components/VanishText";
+
 function WhatWeOffer() {
-  return <div className="h-[100vh]">WhatWeOffer</div>;
+  return (
+    <div className="h-[100vh]">
+      <VanishText />
+    </div>
+  );
 }
 
 export default WhatWeOffer;
