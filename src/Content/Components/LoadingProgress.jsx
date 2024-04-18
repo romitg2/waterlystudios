@@ -62,9 +62,9 @@ const LoadingProgress = (props) => {
       >
         {progress === "100" ? (
           <MdOutlineArrowUpward
-            className={`pointer-events-none relative z-10 rotate-45 text-7xl text-green-500 ${
+            className={`pointer-events-none relative z-10 rotate-180 text-7xl text-green-500 ${
               loaded ? "" : "hidden"
-            } hover:text-black transition-all duration-700 ease-out group-hover:rotate-90`}
+            } hover:text-black transition-all duration-700 ease-out `}
           />
         ) : (
           <>

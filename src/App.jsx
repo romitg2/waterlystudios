@@ -6,6 +6,7 @@ import Content from "./Content/Content";
 import Logo from "./Experience/Logo";
 import Since from "./Experience/Since";
 import { Cursor } from "./Content/Components/Cursor";
+import NavBar from "./Content/NavBar";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Canvas className="hidden sm:block">
         <Logo position={[-5.5, 3.3, 0]} scale={0.5} />
         <Since position={[6, 3.5, 0]} scale={0.2} />
-        <ScrollControls pages={5} damping={0.2}>
+        <ScrollControls pages={10} damping={0.2}>
           <Experience />
           <Scroll html>
             <Content />

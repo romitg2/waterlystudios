@@ -42,8 +42,8 @@ function Greetings() {
           transition={{ duration: 0.5 }}
           style={{
             position: "absolute",
-            top: "35%",
-            left: "45vw",
+            top: "25%",
+            left: "47vw",
             transform: "translate(-50%, -50%)",
           }}
         >
