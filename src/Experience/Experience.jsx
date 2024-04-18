@@ -1,12 +1,5 @@
 function Experience() {
-  return (
-    <>
-      <mesh>
-        <boxGeometry />
-        <meshNormalMaterial />
-      </mesh>
-    </>
-  );
+  return <></>;
 }
 
 export default Experience;

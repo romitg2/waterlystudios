@@ -3,20 +3,22 @@ import "./App.css";
 import Experience from "./Experience/Experience";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import Content from "./Content/Content";
+import Logo from "./Experience/Logo";
+import Since from "./Experience/Since";
 
 function App() {
   return (
     <>
       <Canvas>
-        <ScrollControls pages={3} damping={0.2}>
+        <Logo position={[-5.5, 3.3, 0]} scale={0.5} />
+        <Since position={[6, 3.5, 0]} scale={0.2} />
+        <ScrollControls pages={5} damping={0.2}>
           <Experience />
           <Scroll html>
-            <p>working</p>
             <Content />
           </Scroll>
         </ScrollControls>
       </Canvas>
-      <div>working</div>
     </>
   );
 }

@@ -4,16 +4,18 @@ import ContactForm from "./ContactForm";
 import About from "./About";
 import GetInTouch from "./GetInTouch";
 import WhatWeOffer from "./WhatWeOffer";
+import Blank from "../Overlay/Blank";
 
 function Content() {
   return (
     <div>
-      <Hero />
+      <Blank />
+      {/* <Hero /> */}
       <About />
       <WhatWeOffer />
       <OurTeam />
-      <ContactForm />
       <GetInTouch />
+      <ContactForm />
     </div>
   );
 }

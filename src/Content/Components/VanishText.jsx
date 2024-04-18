@@ -1,25 +1,22 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export const VanishText = () => {
   return (
     <div className=" px-4 py-24 text-center md:py-36">
-      <h3 className="text-3xl font-medium text-black m:text-4xl md:text-5xl lg:text-6xl">
-        We Help
+      <h3 className="text-3xl font-medium text-violet-400 sm:text-4xl md:text-5xl lg:text-6xl">
+        We build websites for
         <AnimatedText
           phrases={[
-            "Creators",
-            "Individual Professionals",
+            "YC Startups",
+            "Fortune 500",
             "Indie Hackers",
             "Marketing Teams",
-            "Businesses",
-            "Startups",
+            "Small Businesses",
           ]}
         />
-        to elevate their Digital Presence.
       </h3>
     </div>
   );
@@ -50,7 +47,7 @@ const AnimatedText = ({ phrases }) => {
           }
 
           return (
-            <motion.div key={word} className="whitespace-nowrap bg-blue-200">
+            <motion.div key={word} className="whitespace-nowrap">
               {word.split("").map((letter, letterIndex) => {
                 const content = (
                   <motion.span
