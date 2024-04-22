@@ -15,7 +15,7 @@ export const Cursor = () => {
     let distX = mouseX - outlineX;
     let distY = mouseY - outlineY;
 
-    outlineX = outlineX + distX * CURSOR_SPEED;
+    outlineX = outlineX + distX * CURSOR_SPEED * 0.8;
     outlineY = outlineY + distY * CURSOR_SPEED;
 
     cursorOutline.current.style.left = `${outlineX}px`;

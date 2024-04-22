@@ -29,7 +29,8 @@ function Experience() {
         >
           <GradientTexture
             stops={[0, 0.8, 1]}
-            colors={["#ffffff", "#8888ff", "#ffffff"]}
+            // colors={["#ffffff", "#8888ff", "#ffffff"]}
+            colors={["#ffffff", "#8888ff", "#000"]}
             size={100}
           />
         </MeshDistortMaterial>

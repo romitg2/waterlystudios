@@ -12,10 +12,6 @@ import { Perf } from "r3f-perf";
 function App() {
   return (
     <>
-      <div className="block sm:hidden">
-        pleace check on desktop!!! soon it'll be available for mobile too... but
-        as of it's not.
-      </div>
       <Cursor />
       <Canvas className="hidden sm:block">
         <Perf />
