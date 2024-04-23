@@ -1,13 +1,16 @@
 /* eslint-disable react/no-unknown-property */
-
+import { MeshRefractionMaterial, Sparkles } from "@react-three/drei";
 import { GradientTexture, MeshDistortMaterial } from "@react-three/drei";
 import { useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
+import { useControls } from "leva";
 
 function Experience() {
   const data = useScroll();
   const materialRef = useRef();
+
+  const { color } = useControls({ color: "#ffffff" });
 
   useFrame(() => {
     console.log(materialRef.current.distort * 10);
@@ -19,6 +22,7 @@ function Experience() {
       <ambientLight intensity={0.5} />
       <pointLight position={[-10, -10, -10]} intensity={5} />
       <mesh>
+        <Sparkles count={500} scale={5 * 2} size={1} speed={0.4} />
         {/* <sphereGeometry args={[15, 32, 16]} /> */}
         <planeGeometry args={[20, 10, 32, 32]} />
         <MeshDistortMaterial
@@ -30,10 +34,15 @@ function Experience() {
           <GradientTexture
             stops={[0, 0.8, 1]}
             // colors={["#ffffff", "#8888ff", "#ffffff"]}
-            colors={["#ffffff", "#8888ff", "#000"]}
+            // colors={["#ffffff", "#4488ff", "#000"]}
+            colors={["#ffffff", color, "#000"]}
             size={100}
           />
         </MeshDistortMaterial>
+      </mesh>
+      <mesh position={[0, 30, 0]}>
+        <boxGeometry args={[10, 10, 10]} />
+        <meshNormalMaterial />
       </mesh>
     </>
   );

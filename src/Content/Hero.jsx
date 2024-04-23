@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <div>
-      <div className="mt-[50vh]">
+      <div className="ml-[10vw] mt-[50vh]">
         <h1 className="text-6xl leading-8 tracking-tight">
           Unleashing{" "}
           <span className="text-8xl tracking-tighter font-extralight italic">

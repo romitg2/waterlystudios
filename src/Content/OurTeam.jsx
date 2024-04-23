@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const OurTeam = () => {
   return (
-    <div className="py-12">
+    <div className="py-12 bg-black opacity-80">
       <h2 className="text-[8vw] uppercase font-bold ml-4">Our Team:</h2>
       <h1 className="text-3xl ml-8 ">
         We <span className="font-bold text-4xl">Design.</span> We{" "}

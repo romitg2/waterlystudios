@@ -10,12 +10,13 @@ import Overlay from "../Overlay/Overlay";
 function Content() {
   return (
     <div>
-      <Overlay />
       <Blank />
+      <Overlay />
       <Hero />
       <About />
       {/* <WhatWeOffer /> */}
       <OurTeam />
+      <Blank />
       <GetInTouch />
       {/* <ContactForm /> */}
     </div>
