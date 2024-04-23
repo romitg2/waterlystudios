@@ -11,14 +11,14 @@ function Content() {
   return (
     <div>
       {/* <Blank /> */}
-      {/* <Overlay /> */}
+      <Overlay />
       <Hero />
       <About />
-      {/* <WhatWeOffer /> */}
+      <WhatWeOffer />
       <OurTeam />
       <Blank />
       <GetInTouch />
-      {/* <ContactForm /> */}
+      <ContactForm />
     </div>
   );
 }
