@@ -4,7 +4,6 @@ import "./App.css";
 import Experience from "./Experience/Experience";
 import { Scroll, ScrollControls } from "@react-three/drei";
 import Content from "./Content/Content";
-import Logo from "./Experience/Logo";
 import Since from "./Experience/Since";
 import { Cursor } from "./Content/Components/Cursor";
 import { Leva } from "leva";
@@ -24,15 +23,15 @@ function App() {
           <Experience />
 
           <Scroll>
-            <Clouds material={THREE.MeshBasicMaterial}>
-              <Cloud
-                segments={40}
-                bounds={[10, 2, 2]}
-                volume={4}
-                color="white"
-              />
-              <Cloud seed={1} scale={2} volume={2} color="hotpink" fade={100} />
-            </Clouds>
+            {/* <Clouds material={THREE.MeshBasicMaterial}> */}
+            {/*   <Cloud */}
+            {/*     segments={40} */}
+            {/*     bounds={[10, 2, 2]} */}
+            {/*     volume={4} */}
+            {/*     color="white" */}
+            {/*   /> */}
+            {/*   <Cloud seed={1} scale={2} volume={2} color="hotpink" fade={100} /> */}
+            {/* </Clouds> */}
           </Scroll>
           <Scroll html>
             <Content />

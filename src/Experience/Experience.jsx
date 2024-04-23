@@ -1,5 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
-import { MeshRefractionMaterial, Sparkles } from "@react-three/drei";
+import { Perf } from "r3f-perf";
+import { MeshWobbleMaterial } from "@react-three/drei";
+import { ScreenSizer } from "@react-three/drei";
+import { Sparkles } from "@react-three/drei";
 import { GradientTexture, MeshDistortMaterial } from "@react-three/drei";
 import { useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
@@ -14,11 +18,19 @@ function Experience() {
 
   useFrame(() => {
     console.log(materialRef.current.distort * 10);
-    materialRef.current.distort = 0.4 + data.delta * 1000;
+    materialRef.current.distort = 0.4 + data.delta * 5000;
   });
 
   return (
     <>
+      <Perf />
+      <mesh>
+        <boxGeometry args={[4, 4, 4, 32, 32, 32]} />
+        <MeshWobbleMaterial wireframe factor={0.8} speed={1} />
+      </mesh>
+      <ScreenSizer
+        scale={1} // scale factor
+      ></ScreenSizer>
       <ambientLight intensity={0.5} />
       <pointLight position={[-10, -10, -10]} intensity={5} />
       <mesh>
@@ -28,7 +40,7 @@ function Experience() {
         <MeshDistortMaterial
           ref={materialRef}
           distort={0.3}
-          opacity={0.2}
+          opacity={0.3}
           speed={3}
         >
           <GradientTexture
